@@ -99,7 +99,7 @@ function appMenu() {
     }
 
     function createEngineer() {
-        console.log("Please create your team!")
+        console.log("Please enter engineer information")
         inquirer.prompt([
             {
                 type: "input",
@@ -129,7 +129,7 @@ function appMenu() {
             {
                 type: "input",
                 name: "engineerEmail",
-                message: "What is the email of the team manager?",
+                message: "What is the email of the Engineer?",
                 validate: answer => {
                     const pass = answer.match(
                         /\$+@\$+\.\$+/
@@ -155,6 +155,67 @@ function appMenu() {
             const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
+            createTeam();
+        });
+    }
+
+    function createIntern() {
+        console.log("Please enter intern information.")
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is the name of the Intern?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter at least one character!";
+                }
+            },
+            {
+                type: "input",
+                name: "internID",
+                message: "What is the ID of the Intern?",
+                validate: answer => {
+                    const pass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please enter a positive number that is greater than zero!";
+                }
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the email of the intern?",
+                validate: answer => {
+                    const pass = answer.match(
+                        /\$+@\$+\.\$+/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please enter a valid email address!";
+                }
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What school does the Intern attend?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter at least one character!";
+                }
+            }
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
+            teamMembers.push(intern);
+            idArray.push(answers.internId);
             createTeam();
         });
     }
