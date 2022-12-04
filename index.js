@@ -6,7 +6,7 @@ const Manager = require("./lib/Manager.js")
 const Engineer = require("./lib/Engineer.js")
 const Intern = require("./lib/Intern.js")
 
-const OUTPUT_DIR = path.resolve(_dirname, "output")
+const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/pageTemplate");
@@ -49,7 +49,7 @@ function appMenu() {
                 message: "What is the email of the team manager?",
                 validate: answer => {
                     const pass = answer.match(
-                        /\$+@\$+\.\$+/
+                        /\S+@\S+\.\S+/
                     );
                     if (pass) {
                         return true;
@@ -136,7 +136,7 @@ function appMenu() {
                 message: "What is the email of the Engineer?",
                 validate: answer => {
                     const pass = answer.match(
-                        /\$+@\$+\.\$+/
+                        /\S+@\S+\.\S+/
                     );
                     if (pass) {
                         return true;
@@ -197,7 +197,7 @@ function appMenu() {
                 message: "What is the email of the intern?",
                 validate: answer => {
                     const pass = answer.match(
-                        /\$+@\$+\.\$+/
+                        /\S+@\S+\.\S+/
                     );
                     if (pass) {
                         return true;
@@ -232,8 +232,8 @@ function appMenu() {
     }
 
     createManager();
-    createEngineer();
-    createIntern();
+
+
 }
 
 appMenu();
