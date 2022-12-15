@@ -72,7 +72,7 @@ function appMenu() {
                 }
             }
         ]).then(answers => {
-            const manager = new Manager(answers.managerName, answers.ManagerID, answers.managerEmail, answers.managerOfficeNumber);
+            const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
             createTeam();
@@ -91,10 +91,10 @@ function appMenu() {
         ]).then(userChoice => {
             switch (userChoice.memberChoice) {
                 case "Engineer":
-                    addEngineer();
+                    createEngineer();
                     break;
                     case "Intern":
-                        addIntern();
+                        createIntern();
                         break;
                         default:
                             buildTeam();
