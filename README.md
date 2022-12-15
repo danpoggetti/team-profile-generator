@@ -87,9 +87,12 @@ Below you'll be able to see screen shots of the deployed app. You can also view 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+Here's a video tutorial showing how the app is used.<br>
+Click <a href="https://drive.google.com/file/d/152muvnxEE_Wd8SDUCs3-1QKMyTiACnuc/view">here</a> to view the tutorial.
+
 Here's a screen shot of what the app looks like when someone is viewing it at different stages.<br>
 
-![](./public/assets/images/note_taker_homepage.png)<br>
+![](/assets/images/team_screen_grab.png)<br>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,7 +120,7 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
-See the [open issues](https://github.com/danpoggetti/note-taker/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/danpoggetti/team-profile-generator/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,7 +171,7 @@ Demo Link: [https://danpoggetti.github.io/team-profile-generator/]
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I want to acknowledge the many great and vast resouces that adided us in creating this weather dashboard app.
+I want to acknowledge the many great and vast resouces that aided me in developing this app.
 
 * [Google](https://www.google.com)
 * [YouTube](https://www.youtube.com)
