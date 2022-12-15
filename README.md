@@ -164,6 +164,8 @@ Project Link: [https://github.com/danpoggetti/team-profile-generator]
 
 Demo Link: [https://danpoggetti.github.io/team-profile-generator/]
 
+Video Link: [https://drive.google.com/file/d/152muvnxEE_Wd8SDUCs3-1QKMyTiACnuc/view]
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
